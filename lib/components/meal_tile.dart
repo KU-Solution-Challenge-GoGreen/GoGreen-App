@@ -62,7 +62,7 @@ class MealTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
         onTap: () {
-          Get.to(() => MealInfoScreen(),
+          Get.to(() => const MealInfoScreen(),
               arguments: MealInfoProps(mealId: meal.id));
         },
         child: SizedBox(
@@ -93,24 +93,30 @@ class MealTile extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
-                              Text(
-                                meal.title,
-                                style: TextStyle(
-                                    color: AppColors.Black,
-                                    fontFamily: 'roboto',
-                                    fontSize: scaleFont(context) * 18,
-                                    fontWeight: FontWeight.bold),
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                              Text(
-                                meal.recipeName,
-                                style: TextStyle(
-                                    color: AppColors.DeepGray,
-                                    fontFamily: 'roboto',
-                                    fontSize: scaleFont(context) * 12,
-                                    fontWeight: FontWeight.normal),
-                                overflow: TextOverflow.ellipsis,
-                              ),
+                              SizedBox(
+                                  width: scaleWidth(context) * 175,
+                                  child: Expanded(
+                                      child: Text(
+                                    meal.title,
+                                    style: TextStyle(
+                                        color: AppColors.Black,
+                                        fontFamily: 'roboto',
+                                        fontSize: scaleFont(context) * 18,
+                                        fontWeight: FontWeight.bold),
+                                    overflow: TextOverflow.ellipsis,
+                                  ))),
+                              SizedBox(
+                                  width: scaleWidth(context) * 175,
+                                  child: Expanded(
+                                      child: Text(
+                                    meal.recipeName,
+                                    style: TextStyle(
+                                        color: AppColors.DeepGray,
+                                        fontFamily: 'roboto',
+                                        fontSize: scaleFont(context) * 12,
+                                        fontWeight: FontWeight.normal),
+                                    overflow: TextOverflow.ellipsis,
+                                  ))),
                               Row(children: [
                                 Text(
                                   (meal.carbonFootprint * 1000)
