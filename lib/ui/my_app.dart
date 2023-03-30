@@ -6,7 +6,6 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
 import 'package:gogreen_client/ui/home_screen.dart';
 
-import 'package:gogreen_client/ui/explore/explore_screen.dart';
 import '../controller/user_controller.dart';
 import '../models/profile.dart';
 import 'account/set_nickname_screen.dart';
@@ -160,7 +159,9 @@ class _Home extends State<Home> {
           if (profile == null) {
             FlutterNativeSplash.remove();
 
-            Get.to(() => const SetNicknameScreen());
+            Get.to(() => const SetNicknameScreen(),
+                arguments: SetNicknameProps(
+                    email: FirebaseAuth.instance.currentUser!.email));
             return;
           }
           FlutterNativeSplash.remove();

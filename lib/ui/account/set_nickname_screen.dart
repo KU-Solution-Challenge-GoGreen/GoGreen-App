@@ -18,8 +18,22 @@ class SetNicknameScreen extends StatefulWidget {
   }
 }
 
+class SetNicknameProps {
+  final String? email;
+  SetNicknameProps({required this.email});
+}
+
 class _SetNicknameScreenState extends State<SetNicknameScreen> {
+  final SetNicknameProps props = Get.arguments;
+
+  late String? email;
   FocusNode nicknameFocus = FocusNode();
+
+  @override
+  void initState() {
+    email = props.email;
+    super.initState();
+  }
 
   final TextEditingController _nicknameTextController = TextEditingController();
 
@@ -97,6 +111,8 @@ class _SetNicknameScreenState extends State<SetNicknameScreen> {
                                         )),
                                     TextField(
                                       enabled: false,
+                                      controller:
+                                          TextEditingController(text: email),
                                       style: TextStyle(
                                           fontSize: scaleFont(context) * 16,
                                           fontFamily: 'roboto',
@@ -106,7 +122,6 @@ class _SetNicknameScreenState extends State<SetNicknameScreen> {
                                           border: OutlineInputBorder(
                                               borderSide: BorderSide(
                                                   color: AppColors.DarkGray)),
-                                          hintText: 'hcy1722@korea.ac.kr',
                                           hintStyle: TextStyle(
                                               color: AppColors.LightGray)),
                                     ),
