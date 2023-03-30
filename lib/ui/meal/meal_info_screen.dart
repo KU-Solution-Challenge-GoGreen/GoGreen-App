@@ -84,33 +84,31 @@ class _MealInfoScreenState extends State<MealInfoScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Padding(
-              padding: EdgeInsets.only(
-                left: scaleWidth(context) * 10,
-                right: scaleWidth(context) * 10,
-                bottom: scaleHeight(context) * 10,
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    DateFormat.MEd().format(meal.date),
-                    style: TextStyle(
-                      color: AppColors.Black,
-                      fontWeight: FontWeight.bold,
-                      fontSize: scaleFont(context) * 16,
-                    ),
-                  ),
-                  Text(
-                    meal.title,
-                    style: TextStyle(
-                      color: AppColors.Black,
-                      fontWeight: FontWeight.bold,
-                      fontSize: scaleFont(context) * 20,
-                    ),
-                  ),
-                ],
-              ),
-            ),
+                padding: EdgeInsets.only(bottom: scaleHeight(context) * 16),
+                child: SizedBox(
+                    height: scaleHeight(context) * 48,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          meal.title,
+                          style: TextStyle(
+                            color: AppColors.Black,
+                            fontWeight: FontWeight.bold,
+                            fontSize: scaleFont(context) * 20,
+                          ),
+                        ),
+                        Text(
+                          DateFormat.MEd().format(meal.date),
+                          style: TextStyle(
+                            color: AppColors.DeepGray,
+                            fontWeight: FontWeight.normal,
+                            fontSize: scaleFont(context) * 14,
+                          ),
+                        ),
+                      ],
+                    ))),
             ClipRRect(
               borderRadius: BorderRadius.circular(5.0),
               child: Image.network(
@@ -131,14 +129,14 @@ class _MealInfoScreenState extends State<MealInfoScreen> {
                     backgroundColor: AppColors.LightGreen,
                   ),
                   onPressed: () {
-                    Get.to(() => RecipeInfoScreen(),
+                    Get.to(() => const RecipeInfoScreen(),
                         arguments: RecipeInfoProps(recipeId: meal.recipe.id));
                   },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       Text(
-                        meal.title,
+                        meal.recipe.name,
                         style: TextStyle(
                           color: AppColors.Green,
                           fontWeight: FontWeight.bold,
@@ -168,7 +166,7 @@ class _MealInfoScreenState extends State<MealInfoScreen> {
                   BoxShadow(
                     blurRadius: 10,
                     spreadRadius: 0,
-                    offset: Offset(0, 8),
+                    offset: const Offset(0, 8),
                     color: AppColors.DarkGray.withOpacity(0.5),
                   ),
                 ],
