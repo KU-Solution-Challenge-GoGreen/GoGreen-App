@@ -329,7 +329,9 @@ class _DailyMealScreenState extends State<DailyMealScreen> {
                                   await _getImageFromGallery();
                                   if (_pickedFile != null) {
                                     Get.to(() => const AddMealScreen(),
-                                            arguments: _pickedFile)
+                                            arguments: AddMealProps(
+                                                mealImage: _pickedFile!,
+                                                selectedDate: _selectedDate))
                                         ?.then((value) {
                                       updateMealsData(_selectedDate);
                                       updateUserDetail();
