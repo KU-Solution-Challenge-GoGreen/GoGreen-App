@@ -83,13 +83,6 @@ class MyApp extends StatelessWidget {
           )),
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
-      // routes: {
-      //   '/': (context) => Home(),
-      //   '/setnick_or_dailymeal': (context) => Home(),
-      //   '/signin': (context) => SignInScreen(),
-      //   '/setnickname': (context) => const SetNicknameScreen(),
-      //   '/dailymeal': (context) => DailyMealScreen(),
-      // },
       home: const App(),
       localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
@@ -110,7 +103,6 @@ class App extends StatelessWidget {
     return FutureBuilder(
         future: Firebase.initializeApp(),
         builder: (BuildContext context, AsyncSnapshot snapshot) {
-          print(snapshot.toString());
           if (snapshot.hasError) {
             return const Center(
               child: Text('Firebase load fail'),
@@ -153,9 +145,7 @@ class _Home extends State<Home> {
             return;
           }
 
-          print("hey! ${FirebaseAuth.instance.currentUser!.uid}");
           Profile? profile = await findUserByToken();
-          print(profile);
           if (profile == null) {
             FlutterNativeSplash.remove();
 
@@ -177,36 +167,5 @@ class _Home extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return const Center(child: CircularProgressIndicator());
-    // return StreamBuilder<User?>(
-    //   stream: FirebaseAuth.instance.authStateChanges(),
-    //   builder: (BuildContext context, AsyncSnapshot<User?> snapshot) {
-    //     print('snapshot1: ${snapshot.data}');
-    //     return StreamBuilder<Profile?>(
-    //         stream: Stream.fromFuture(
-    //             userController.authStateChanges(snapshot.data)),
-    //         builder:
-    //             (BuildContext context2, AsyncSnapshot<Profile?> snapshot2) {
-    //           print('snapshot1: ${snapshot.data}');
-    //           print('snapshot2: ${snapshot2.data}');
-    //           print('userProfile: ${userController.myProfile}');
-    //           Future.delayed(Duration(seconds: 0), () {
-    //             if (!snapshot.hasData) {
-    //               //return SignInScreen();
-    //               Get.to(() => SignInScreen());
-    //             } else if (snapshot.hasData &&
-    //                 userController.myProfile == null) {
-    //               // data가 있고, db에 정보가 없으면 /setnickname으로 이동
-    //               //return SetNicknameScreen();
-    //               Get.to(() => SetNicknameScreen());
-    //             } else {
-    //               // data가 있고, db에도 정보가 있으면 바로 메인 페이지로
-    //               //return DailyMealScreen();
-    //               Get.off(() => DailyMealScreen());
-    //             }
-    //           });
-    //           return Center(child: CircularProgressIndicator());
-    //         });
-    //   },
-    // );
   }
 }

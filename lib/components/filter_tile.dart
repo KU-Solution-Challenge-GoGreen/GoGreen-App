@@ -7,10 +7,6 @@ import 'package:gogreen_client/constants/dimens.dart';
 import '../models/meal_explore.dart';
 
 class VeganFilterTile extends StatelessWidget {
-  // VeganFilterTile(this._veganTypeInfo);
-
-  // final MealExplore _veganTypeInfo;
-
   @override
   Widget build(BuildContext context) {
     double maxWidth = MediaQuery.of(context).size.width;
@@ -55,16 +51,6 @@ class VeganFilterTile extends StatelessWidget {
                   SvgPicture.asset(
                     'assets/images/vegan_type/filter_check.svg',
                   )
-                  // Container(
-                  //   foregroundDecoration: BoxDecoration(
-                  //     color: Colors.grey,
-                  //     backgroundBlendMode: BlendMode.saturation,
-                  //   ),
-                  //   child: SvgPicture.asset(
-                  //     'assets/images/vegan_type/carrot.svg',
-                  //     width: 30,
-                  //   ),
-                  // )
                 ],
               )
             ],

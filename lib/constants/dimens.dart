@@ -28,8 +28,3 @@ double scaleFont(BuildContext context) {
 double buttonBottomMargin(BuildContext context) {
   return scaleHeight(context) * 68;
 }
-
-//실사용
-//  Container(
-//  	height: 224 * scaleWidth(context),
-//  ),
