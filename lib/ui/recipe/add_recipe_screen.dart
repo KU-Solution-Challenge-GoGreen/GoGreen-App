@@ -56,18 +56,6 @@ class _AddRecipeScreenState extends State<AddRecipeScreen> {
         appBar: AppBar(
           backgroundColor: AppColors.Green,
           leading: const BackButton(color: AppColors.White),
-          actions: <Widget>[
-            TextButton(
-              child: Text(
-                'Done',
-                style: TextStyle(
-                  color: AppColors.White,
-                  fontSize: scaleFont(context) * 16,
-                ),
-              ),
-              onPressed: () {},
-            ),
-          ],
           title: const Text("Add Recipe"),
           titleTextStyle: TextStyle(
               color: AppColors.White,
