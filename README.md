@@ -60,7 +60,7 @@ GoGreen offers features that allows users to easily input their daily meals, vie
 
 **For Android users,**
 
-[Download the apk file for your mobile version here](https://drive.google.com/file/d/1B2JN4RYQHm-2eyxQK4yzqZBi5afpdmwc/view?usp=sharing). Install and run the apk file on your device.
+[Download the apk file for your mobile version here](https://drive.google.com/drive/folders/16IPJl3b8mO0xkEJhC0sdv86LCqrSM_fg?usp=share_link). Install and run the apk file on your device.
 <br/>
 
 **For iOS users,**
