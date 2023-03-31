@@ -10,6 +10,10 @@ _GoGreen_ means that both we and the earth have to be greeener.
 
 ## ❓ Introduction
 
+GoGreen is a mobile application designed to help users reduce their carbon footprint by providing them with an easy and convenient way to track their daily meals' environmental impact. By using GoGreen, users can learn about the carbon footprint of their diet and take steps to reduce their impact on the environment. This application is participating in [GDSC GoogleSolutionChallenge2023](https://developers.google.com/community/gdsc-solution-challenge) and aims to contribute to the [UN's sustainable development goal](https://developers.google.com/community/gdsc-solution-challenge/UN-goals) of "Life on Land" and “Climate Action” by promoting sustainable practices and raising awareness about environmental issues.
+
+GoGreen offers features that allows users to easily input their daily meals, view their carbon footprint, and track their progress over time. Users can also access useful tips and information on other users’ recipes so that they can make more sustainable food choices. By using GoGreen, users can make a positive impact on the environment and contribute to a more sustainable future.
+
 <br/>
 
 ## 🍀 Core Features
@@ -21,6 +25,8 @@ _GoGreen_ means that both we and the earth have to be greeener.
 ## 🛠 Project Architecure
 
 ![image](https://user-images.githubusercontent.com/81142151/228294839-0dc0e9be-e320-4714-8c4d-d45cdc5386cd.png)
+
+   <br/>
 
 ## 📽 Demo Video Link
 
@@ -52,9 +58,15 @@ _GoGreen_ means that both we and the earth have to be greeener.
 
  <br/>
 
-**For android users,**
+**For Android users,**
 
 [Download the apk file for your mobile version here](https://drive.google.com/file/d/1B2JN4RYQHm-2eyxQK4yzqZBi5afpdmwc/view?usp=sharing). Install and run the apk file on your device.
+<br/>
+
+**For iOS users,**
+
+Build GoGreen application via Xcode, and install it to your iOS device manually.
+
 <br/>
 
 ## 👪 Contributors
