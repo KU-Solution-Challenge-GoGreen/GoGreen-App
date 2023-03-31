@@ -24,7 +24,7 @@ _GoGreen_ means that both we and the earth have to be greeener.
 
 ## 📽 Demo Video Link
 
-동영상링크
+[![image](https://user-images.githubusercontent.com/81142151/229040590-ca0a6be7-307b-4286-aa6f-1d218cb1c748.png)](https://youtu.be/7R4fGtSjgHs)
 
  <br/>
 
@@ -47,7 +47,7 @@ _GoGreen_ means that both we and the earth have to be greeener.
 
  <br/>
 
-1. To get package dependencies, run the following command:
+3. To get package dependencies, run the following command:
    `flutter clean && flutter pub get`
 
  <br/>
