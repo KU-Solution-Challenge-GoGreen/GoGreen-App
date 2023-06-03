@@ -22,7 +22,7 @@ GoGreen offers features that allows users to easily input their daily meals, vie
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | - You can record several meals on each day, with a photo, recipe, and some memos. <br/> - After recording daily diet, you can check how often you follow a vegan diet through a heatmap. <br/> | - You have to select a recipe for each meal. <br/> - You can add recipes if there's no recipes to add for the meal. <br/> | - You can check the amount of carbon footprints from your meals. <br/> - We also inform you how much carbon footprints you've reduced compared to a meal including beef or pork. <br/> - We calculate the average amount of carbon footprints through every meals you eat and the average on each day. | - You can explore others' meals and recipes based on the 7 different vegan types. <br/> - If you like some recipes, you can bookmark them and cook according to them later. <br/> |
 
-## 🛠 Project Architecure
+## 🛠 Project Architecture
 
 ![image](https://user-images.githubusercontent.com/81142151/228294839-0dc0e9be-e320-4714-8c4d-d45cdc5386cd.png)
 
@@ -36,7 +36,7 @@ GoGreen offers features that allows users to easily input their daily meals, vie
 
 ## 📲 Execution Method
 
-**After setting up flutter development envrionment,**
+**After setting up flutter development environment,**
 
 1. Clone this repository.
    `git clone https://github.com/KU-Solution-Challenge-GoGreen/GoGreen-App`
